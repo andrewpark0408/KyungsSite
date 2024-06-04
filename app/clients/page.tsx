@@ -13,7 +13,7 @@ export default async function WatchList() {
   const { data: clients, error } = await supabase
     .from('clients')
     .select('*')
-    .eq('user_id', user.id)
+    .eq('user_id', user?.id)
     .order('name', { ascending: true })
 
   if (error) {
@@ -36,7 +36,7 @@ export default async function WatchList() {
         </div>
         <ClientForm />
         <div className="mt-6">
-          {clients.map((client) => (
+          {clients?.map((client) => (
             <div key={client.id} className="mb-4 p-4 bg-gray-800 rounded-lg shadow">
               <h2 className="text-xl text-white mb-2">{client.name} - {client.email} - {client.phone}</h2>
               <div className="flex space-x-2">
