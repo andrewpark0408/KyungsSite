@@ -11,7 +11,7 @@ export default function AuthForm() {
       view="magic_link"
       showLinks={false}
       providers={[]}
-      redirectTo='https://kyungs-site-wqno.vercel.app/auth/callback'
+      redirectTo='https://kyungs-site.vercel.app/auth/callback'
     />
   )
 }
